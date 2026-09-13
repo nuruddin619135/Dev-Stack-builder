@@ -8,6 +8,10 @@ function StackList() {
   const [stacks, setStacks] = useState(null);
   const [yourStack, setYourStack] = useState([]);
   function addToStack(id) {
+    if (yourStack.includes(id)) {
+      toast.error("The same technology cannot be added twice");
+      return;
+    }
     setYourStack([...yourStack, id]);
     let name = stacks.find((item) => item.id === id)?.name;
     toast.success(`${name}  added successfully`);

@@ -31,7 +31,12 @@ export default function Card({ stack, isInYourStack, addToStack }) {
       </div>
       <div>
         {isInYourStack ? (
-          <button className="text-[#d91b7e] border border-[#d91b7e] px-4 py-2 rounded-full w-full mt-5">
+          <button
+            className="text-[#d91b7e] border border-[#d91b7e] px-4 py-2 rounded-full w-full mt-5"
+            onClick={() => {
+              addToStack(stack.id);
+            }}
+          >
             ✓ Added to Stack
           </button>
         ) : (

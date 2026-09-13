@@ -24,7 +24,9 @@ function Banner() {
             <button className="py-2 px-3 bg-gradient-to-r from-[#F97318] to-[#ED4999] rounded font-medium text-white cursor-pointer">
               Explore Technologies
             </button>
-            <button className="cursor-pointer">Learn More</button>
+            <button className="cursor-pointer border border-black px-3 py-2 rounded ">
+              Learn More
+            </button>
           </div>
         </div>
         <div className="w-[50%]">
