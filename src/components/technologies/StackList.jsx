@@ -3,8 +3,9 @@ import Card from "./Card";
 import { useState } from "react";
 import YourStack from "./YourStack";
 import { toast } from "react-toastify";
+import { useEffect } from "react";
 function StackList() {
-  const [stacks, setStacks] = useState(data);
+  const [stacks, setStacks] = useState(null);
   const [yourStack, setYourStack] = useState([]);
   function addToStack(id) {
     setYourStack([...yourStack, id]);
@@ -20,6 +21,12 @@ function StackList() {
     setYourStack([]);
     toast.error("All stacks removed successfully");
   }
+
+  useEffect(() => {
+    setStacks(data);
+  }, []);
+
+  if (!stacks) return <p className=" text-2xl text-center">Loading...</p>;
   return (
     <div className="flex">
       <div className="flex-3">
