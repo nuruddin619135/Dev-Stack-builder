@@ -4,7 +4,7 @@ import { useState } from "react";
 import YourStack from "./YourStack";
 function StackList() {
   const [stacks, setStacks] = useState(data);
-  const [yourStack, setYourStack] = useState(["1"]);
+  const [yourStack, setYourStack] = useState([]);
   function addToStack(id) {
     setYourStack([...yourStack, id]);
   }
