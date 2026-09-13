@@ -1,6 +1,8 @@
 export default function Card({ stack, isInYourStack, addToStack }) {
   return (
-    <div className="flex flex-col gap-2 rounded-2xl p-3">
+    <div
+      className={`flex flex-col gap-2 rounded-2xl p-3   ${isInYourStack ? "border-2 border-pink-400" : "border-2 border-transparent"} `}
+    >
       <div className="flex justify-between items-center">
         <div>
           <img src={stack.icon} alt={stack.name} className="w-12 h-12" />
