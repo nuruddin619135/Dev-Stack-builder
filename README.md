@@ -1,16 +1,69 @@
-# React + Vite
+# React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About The Project
 
-Currently, two official plugins are available:
+This is a React project.  
+In this project I use React and JSON data.  
+It is a simple project where user can see and manage the data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies I Use
 
-## React Compiler
+- React
+- JavaScript
+- HTML
+- CSS
+- JSON
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Load data from JSON
+- Manage data using React state
+- Simple and clean UI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## React Questions
+
+### 1. What is JSX, and why is it used in React?
+
+JSX is like HTML but we write it inside JavaScript.
+
+We use JSX because it make UI easy to write in React.
+
+### 2. What is the difference between props and state?
+
+Props is use to send data from parent to child.
+
+State is use to store data inside a component and change the data.
+
+### 3. What does the useState hook do, and where did you use it in this project?
+
+useState is use to create and change state.
+
+I use useState to store and update data in this project.
+
+### 4. What does the useEffect hook do, and why did you need it to load the JSON data?
+
+useEffect is use to run some code when component load or data change.
+
+I use useEffect to load the JSON data when the component start.
+
+### 5. Why does every item in a .map() list need a unique key prop?
+
+React use key to identify every item.
+
+It help React know which item is changed, added or removed.
+
+### 6. What is conditional rendering?
+
+Conditional rendering means show something when a condition is true.
+
+I use it to show empty stack message when there is no item.
+
+{stack.length === 0 && <p>Stack is empty</p>}
+
+### 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+
+Parent send data to child using props.
+
+Child send data to parent using a function.
+
+So parent to child use props and child to parent use function.
