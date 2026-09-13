@@ -1,6 +1,6 @@
 import YourStackLists from "./YourStackLists";
 
-function YourStack({ yourStack, removeFromStack }) {
+function YourStack({ yourStack, removeFromStack, removeAllFromStack }) {
   return (
     <div className="p-1">
       <div>
@@ -15,6 +15,7 @@ function YourStack({ yourStack, removeFromStack }) {
         <YourStackLists
           yourStack={yourStack}
           removeFromStack={removeFromStack}
+          removeAllFromStack={removeAllFromStack}
         />
       )}
     </div>

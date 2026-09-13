@@ -2,14 +2,23 @@ import data from "./data.json";
 import Card from "./Card";
 import { useState } from "react";
 import YourStack from "./YourStack";
+import { toast } from "react-toastify";
 function StackList() {
   const [stacks, setStacks] = useState(data);
   const [yourStack, setYourStack] = useState([]);
   function addToStack(id) {
     setYourStack([...yourStack, id]);
+    let name = stacks.find((item) => item.id === id)?.name;
+    toast.success(`${name}  added successfully`);
   }
   function removeFromStack(id) {
     setYourStack(yourStack.filter((item) => item !== id));
+    let name = stacks.find((item) => item.id === id)?.name;
+    toast.error(`${name} removed successfully`);
+  }
+  function removeAllFromStack() {
+    setYourStack([]);
+    toast.error("All stacks removed successfully");
   }
   return (
     <div className="flex">
@@ -32,6 +41,7 @@ function StackList() {
         <YourStack
           yourStack={stacks.filter((item) => yourStack.includes(item.id))}
           removeFromStack={removeFromStack}
+          removeAllFromStack={removeAllFromStack}
         />
       </div>
     </div>
